@@ -1808,7 +1808,6 @@ GameObject:
   - component: {fileID: 6377991993669271167}
   - component: {fileID: 136793183250271045}
   - component: {fileID: 6837070509649498949}
-  - component: {fileID: 2732683662962194579}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1886,24 +1885,6 @@ MonoBehaviour:
   maxLife: 100
   currentLife: 0
   FillLife: {fileID: 7114007665698349085}
---- !u!114 &2732683662962194579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8895457118885847202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ff026ab428df045a41fb2e75edb036, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints: []
-  movementSpeed: 4
-  rotationSpeed: 6
-  maxLife: 100
-  currentLife: 0
-  FillLife: {fileID: 0}
 --- !u!1 &8965203187072350162
 GameObject:
   m_ObjectHideFlags: 0

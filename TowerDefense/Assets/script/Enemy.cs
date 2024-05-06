@@ -22,25 +22,15 @@ public class Enemy : MonoBehaviour
     
     private void Awake()
     {
-        FillLife = GameObject.Find("FillLife").GetComponent<Image>();
-    if (FillLife != null)
-    {
         canvasRoot = FillLife.transform.parent.parent;
         initLifeRotation = canvasRoot.rotation;
-    }
-    else
-    {
-        Debug.LogError("FillLife is not assigned");
-    }
-    anim = GetComponent<Animator>();
-    anim.SetBool("Movement", true);
-    GetWayPoints();
-    // currentLife = maxLife;
+        anim = GetComponent<Animator>();
+        anim.SetBool("Movement", true);
+        GetWayPoints();
     }
 
     void Start()
     {
-        //FillLife = GameObject.Find("FillLife").GetComponent<Image>();
         currentLife = maxLife;
     }
 

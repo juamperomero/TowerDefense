@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -303,14 +303,31 @@ MonoBehaviour:
     - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
     - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
     - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-  - timerPerCreation: 1
-    timeForNextWave: 5
+  - timerPerCreation: 0.3
+    timeForNextWave: 1
     counterToNextWave: 0
     enemys:
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-  isWaitingForNextWave: 1
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
+  isWaitingForNextWave: 0
   wavesFinish: 0
   currentWave: 0
   initPosition: {fileID: 1273159221}
@@ -1037,8 +1054,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00071312493, y: -0.9544435, z: 0.298382, w: -0.0022961742}
-  m_LocalPosition: {x: -8.666609, y: 11.09556, z: 19.884254}
+  m_LocalRotation: {x: -0.0027636427, y: 0.8985904, z: -0.4387433, w: -0.0056602005}
+  m_LocalPosition: {x: -10.58361, y: 9.123292, z: 15.776004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

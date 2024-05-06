@@ -62,7 +62,7 @@ public class WaveManager : MonoBehaviour
             yield return new WaitForSeconds(waves[currentWave].timerPerCreation);
         }
         isWaitingForNextWave = true;
-        if(currentWave < waves.Count - 1)
+        if(currentWave >= waves.Count - 1)
         {
             Debug.Log("Nivel terminado");
             wavesFinish = true;
@@ -79,11 +79,10 @@ public class WaveManager : MonoBehaviour
     }
 }
 [System.Serializable]
-
 public class WaveObject
 {
     public float timerPerCreation = 1;
     public float timeForNextWave = 10;
-    public float counterToNextWave = 0;
+    [HideInInspector] public float counterToNextWave = 0;
     public List<Enemy> enemys = new List<Enemy>();
 }
