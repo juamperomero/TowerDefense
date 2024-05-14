@@ -1,28 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 public class Bullet : MonoBehaviour
 {
-   private Enemy target;
-   private float dmg;
-   public float velocity = 90;
+    private Transform target;
+    private float dmg;
+    public float speed = 90;
 
-   public void SetBullet(Enemy target, float dmg){
-    this.target = target;
-    this.dmg = dmg;
-   }
+    public void Seek(Transform _target)
+    {
+        target = _target;
+    }
 
-    // Update is called once per frame
     void Update()
     {
-        if (target != null){
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, velocity * Time.deltaTime);
-            float distance = Vector3.Distance(transform.position, target.transform.position);
-            if (distance <= 0.1f){
-                target.TakeDamage(dmg);
-                Destroy(gameObject);
-            }
+        if (target == null)
+        {
+            Destroy(gameObject);
+            return;
         }
+
+        Vector3 dir = target.position - transform.position;
+        float distanceThisFrame = speed * Time.deltaTime;
+
+        if (dir.magnitude <= distanceThisFrame)
+        {
+            HitTarget();
+            return;
+        }
+
+        transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+    }
+
+    void HitTarget()
+    {
+        // Aquí puedes aplicar el daño al objetivo
+        Destroy(gameObject);
     }
 }
+

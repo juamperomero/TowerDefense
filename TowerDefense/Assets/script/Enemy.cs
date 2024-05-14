@@ -73,7 +73,6 @@ private void Movement()
     }
     private void LookAt()
     {
-        //transform.LookAt(waypoints[targetIndex]);
         var dir = waypoints[targetIndex].position - transform.position;
         var rootTarget = Quaternion.LookRotation(dir);
         transform.rotation = Quaternion.Slerp(transform.rotation, rootTarget, rotationSpeed * Time.deltaTime);
@@ -91,15 +90,9 @@ private void Movement()
         var fillValue = currentLife / 100;
         FillLife.fillAmount = fillValue;
         currentLife = newLife;
-        //StartCoroutine(AnimationDamage()); El duende no tiene animacion de recibir daño
 
     }
-    /* private void AnimationDamage()  //El duende no tiene animacion de recibir daño
-        {
-            anim.SetBool("Damage", true);
-            yield return new WaitForSeconds(0.1f);
-            anim.SetBool("Damage", false);
-        }*/
+
     private void OnDead()
     {
         isDead = true;
