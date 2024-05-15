@@ -8,12 +8,18 @@ public class Node : MonoBehaviour
     public static Node selectedNode;
     private Animator anim;
     private bool IsSelected = false;
+    public bool isOcuped;
+    public Tower towerOcuped;
     
     private void Awake(){
         anim = GetComponent<Animator>();
     }
 
     private void OnMouseDown(){
+        if(isOcuped){
+            TowerUIPanelManager.instance.OpenPanel(towerOcuped);
+            return;
+        }
         if(selectedNode && selectedNode != this) selectedNode.OnCloseSelection();
         selectedNode = this;
         IsSelected = !IsSelected;

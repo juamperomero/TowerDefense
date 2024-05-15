@@ -6,39 +6,27 @@ using Vector3 = UnityEngine.Vector3;
 
 public class Bullet : MonoBehaviour
 {
-    private Transform target;
+    private Enemy target;
     private float dmg;
     public float speed = 90;
 
-    public void Seek(Transform _target)
+    public void SetBullet(Enemy target, float dmg)
     {
-        target = _target;
+        this.target = target;
+        this.dmg = dmg;
     }
 
     void Update()
     {
-        if (target == null)
+        if (target != null)
         {
-            Destroy(gameObject);
-            return;
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+            float distance = Vector3.Distance(transform.position, target.transform.position);
+            if (distance <= 0.1f){
+                target.TakeDamage(dmg);
+                Destroy(gameObject);
+            }
         }
-
-        Vector3 dir = target.position - transform.position;
-        float distanceThisFrame = speed * Time.deltaTime;
-
-        if (dir.magnitude <= distanceThisFrame)
-        {
-            HitTarget();
-            return;
-        }
-
-        transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-    }
-
-    void HitTarget()
-    {
-        // Aquí puedes aplicar el daño al objetivo
-        Destroy(gameObject);
     }
 }
 

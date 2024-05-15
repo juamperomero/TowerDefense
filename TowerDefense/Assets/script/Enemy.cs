@@ -19,6 +19,9 @@ public class Enemy : MonoBehaviour
     public Image FillLife;
     private Transform canvasRoot;
     private Quaternion initLifeRotation;
+
+    [Header("OnDead")]
+    public int moneyOnDead = 10;
     
     private void Awake()
     {
@@ -100,6 +103,7 @@ private void Movement()
         currentLife = 0;
         FillLife.fillAmount = 0;
         StartCoroutine(OnDeadEffect());
+        PlayerData.instance.AddMoney(moneyOnDead);
     }
 
     private IEnumerator OnDeadEffect()
