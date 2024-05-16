@@ -1887,6 +1887,8 @@ MonoBehaviour:
   maxLife: 100
   currentLife: 0
   FillLife: {fileID: 7114007665698349085}
+  moneyOnDead: 10
+  dmg: 100
 --- !u!65 &6912507518558813023
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -22,6 +22,12 @@ public class Enemy : MonoBehaviour
 
     [Header("OnDead")]
     public int moneyOnDead = 10;
+
+    [Header("Damage")]
+    public float dmg = 10;
+
+    private SaludPlayer playerBase;
+    private bool isAttacking = false;
     
     private void Awake()
     {
@@ -30,6 +36,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetBool("Movement", true);
         GetWayPoints();
+        playerBase = FindObjectOfType<SaludPlayer>();
     }
 
     void Start()
@@ -53,10 +60,6 @@ public class Enemy : MonoBehaviour
         canvasRoot.transform.rotation = initLifeRotation;
         Movement();
         LookAt();
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(10);
-        }
     }
 
 private void Movement()
@@ -68,7 +71,7 @@ private void Movement()
         {
             if (targetIndex >= waypoints.Count - 1)
             {
-                Debug.Log("LLEGASTE AL FINAL");
+                StartCoroutine(AttackBase());
                 return;
             }
             targetIndex++;
@@ -79,6 +82,39 @@ private void Movement()
         var dir = waypoints[targetIndex].position - transform.position;
         var rootTarget = Quaternion.LookRotation(dir);
         transform.rotation = Quaternion.Slerp(transform.rotation, rootTarget, rotationSpeed * Time.deltaTime);
+    }
+
+    private IEnumerator AttackBase()
+    {
+        if (playerBase != null && !isAttacking)
+        {
+            isAttacking = true;
+            anim.SetTrigger("Attack");
+            yield return new WaitForSeconds(GetAnimationLength("Attack01"));
+            playerBase.TakeDmg(dmg);
+            Destroy(gameObject);
+        }
+    }
+
+     private float GetAnimationLength(string animationName)
+    {
+        foreach (var clip in anim.runtimeAnimatorController.animationClips)
+        {
+            if (clip.name == animationName)
+            {
+                return clip.length;
+            }
+        }
+        return 0f;
+    }
+
+    private void OnDeadBase()
+    {
+        isDead = true;
+        anim.SetBool("Die", true);
+        currentLife = 0;
+        FillLife.fillAmount = 0;
+        StartCoroutine(OnDeadEffect());
     }
 
     public void TakeDamage(float dmg)
@@ -93,7 +129,6 @@ private void Movement()
         var fillValue = currentLife / 100;
         FillLife.fillAmount = fillValue;
         currentLife = newLife;
-
     }
 
     private void OnDead()
@@ -118,5 +153,4 @@ private void Movement()
         }
         Destroy(this);
     }
-    
 }
