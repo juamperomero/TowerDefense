@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 1321725807143556810}
   - component: {fileID: 6209532335995674294}
   - component: {fileID: 4295987525787569179}
+  - component: {fileID: 987670921351216547}
   m_Layer: 0
   m_Name: Swarm09
   m_TagString: Untagged
@@ -250,6 +251,27 @@ MonoBehaviour:
   currentLife: 0
   FillLife: {fileID: 7114007665698349085, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
   moneyOnDead: 10
+--- !u!65 &987670921351216547
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2487018725417124089}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3013900630049115824
 GameObject:
   m_ObjectHideFlags: 0

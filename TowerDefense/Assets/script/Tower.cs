@@ -26,7 +26,9 @@ public class Tower : MonoBehaviour
     }
 
     private void OnMouseDown(){
-        TowerUIPanelManager.instance.OpenPanel(this);
+        if(towerName == "MachineGunTower_0") TowerUIPanelManager.instance.OpenPanel(this);
+        else if(towerName == "MachineGunTower_1") TowerUIPanelManager1.instance.OpenPanel(this);
+        else if(towerName == "RocketTower_0") TowerUIPanelManager2.instance.OpenPanel(this);
     }
 
     private void Update(){

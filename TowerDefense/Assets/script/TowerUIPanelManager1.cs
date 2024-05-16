@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Unity.VisualScripting;
 
-public class TowerUIPanelManager : MonoBehaviour
+public class TowerUIPanelManager1 : MonoBehaviour
 {
     private Tower tower;
     public TextMeshProUGUI towerNameTXT;
@@ -18,7 +17,7 @@ public class TowerUIPanelManager : MonoBehaviour
     public GameObject root;
     public Button buttonUpgrade;
     public Button buttonSell;
-    public static TowerUIPanelManager instance;
+    public static TowerUIPanelManager1 instance;
     private void Awake(){
         if(instance == null)    instance = this;
         else Destroy(this);
