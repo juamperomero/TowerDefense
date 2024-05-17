@@ -12,6 +12,9 @@ public class SaludPlayer : MonoBehaviour
     public Image healthBar;
     public Text healthText;
 
+    [Header("Game Over UI")]
+    public GameObject gameOverCanvas;
+
     void Update()
     {
         UpdateInterface();
@@ -36,6 +39,12 @@ public class SaludPlayer : MonoBehaviour
     private void OnBaseDestroyed()
     {
         Debug.Log("La base ha sido destruida.");
-        // Implementar lógica adicional aquí, como terminar el juego o mostrar un mensaje.
+        ShowGameOverScreen();
+    }
+
+    private void ShowGameOverScreen()
+    {
+        gameOverCanvas.SetActive(true);  // Activa el Canvas de Game Over
+        Time.timeScale = 0f;  // Detiene el tiempo del juego
     }
 }
