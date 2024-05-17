@@ -1013,7 +1013,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940824847553969080}
-  m_LocalRotation: {x: -0.008276654, y: -0.9249995, z: 0.37934184, w: -0.020182082}
+  m_LocalRotation: {x: -0.26829904, y: -0.6542291, z: 0.26829904, w: -0.6542291}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2300,9 +2300,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4816652023610238356}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00045032034, y: 0.70710665, z: -0.70710665, w: -0.00045032034}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 12.22, y: 0, z: 20.823902}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3743086522979104375}
@@ -2315,7 +2315,7 @@ Transform:
   - {fileID: 8863105556918863211}
   - {fileID: 1359627694893633565}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 180.073, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1331108695503475536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2329,13 +2329,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  movementSpeed: 4
+  movementSpeed: 2
   rotationSpeed: 6
   isDead: 0
   maxLife: 100
   currentLife: 0
   FillLife: {fileID: 7114007665698349085, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
   moneyOnDead: 10
+  dmg: 10
 --- !u!95 &3918125168614597081
 Animator:
   serializedVersion: 5
@@ -2349,7 +2350,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 56eafcb298284f944a1766a28ec9091b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

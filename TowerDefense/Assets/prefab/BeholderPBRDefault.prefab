@@ -997,7 +997,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: ee8c938398f62ac4cb422f45098d6a3b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1023,8 +1023,9 @@ MonoBehaviour:
   isDead: 0
   maxLife: 100
   currentLife: 0
-  FillLife: {fileID: 7114007665698349085, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
+  FillLife: {fileID: 7891387014129701853}
   moneyOnDead: 10
+  dmg: 10
 --- !u!65 &-2503357588830571992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1782,7 +1783,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9024123609972186352}
-  m_LocalRotation: {x: -0.37933648, y: 0.020772425, z: -0.0085187545, w: -0.92498636}
+  m_LocalRotation: {x: -0.26829904, y: -0.6542291, z: 0.26829904, w: -0.6542291}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

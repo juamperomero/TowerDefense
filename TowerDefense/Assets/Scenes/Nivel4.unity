@@ -12334,51 +12334,12 @@ MonoBehaviour:
     timeForNextWave: 10
     counterToNextWave: 0
     enemys:
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-    - {fileID: 6837070509649498949, guid: 785c4d218aa4d084b937a4b9553d9f9f, type: 3}
-  - timerPerCreation: 0.3
-    timeForNextWave: 1
-    counterToNextWave: 0
-    enemys:
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-    - {fileID: 7624927071508574257, guid: 2fecc7754bcd4a74aa16721b18df0822, type: 3}
-  - timerPerCreation: 2
-    timeForNextWave: 2
-    counterToNextWave: 0
-    enemys:
-    - {fileID: 6125944234699774423, guid: 06914b2107dce264ca5cb33f87b229f4, type: 3}
-    - {fileID: 9000679751869630508, guid: 8cf4c2cb50eef414593e41bf2ef4f97e, type: 3}
     - {fileID: 7223970427854028746, guid: 73c135810db3cf94a8bb596640b0d3fd, type: 3}
+  - timerPerCreation: 1
+    timeForNextWave: 10
+    counterToNextWave: 0
+    enemys:
     - {fileID: 4295987525787569179, guid: 5e940c501524fc04795b152aa7c4ab8b, type: 3}
-    - {fileID: 6386092246695884504, guid: 51223500291656949998e3810d3132fe, type: 3}
-    - {fileID: 8655781647784918766, guid: e4efb6382db833b4e8728e5a50491c2c, type: 3}
-    - {fileID: 1331108695503475536, guid: 9599f06fec81a904a9a54f15d13b83ed, type: 3}
   isWaitingForNextWave: 0
   wavesFinish: 0
   currentWave: 0

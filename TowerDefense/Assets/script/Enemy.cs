@@ -71,6 +71,7 @@ private void Movement()
         {
             if (targetIndex >= waypoints.Count - 1)
             {
+                Debug.Log("Attack Base");
                 StartCoroutine(AttackBase());
                 return;
             }
