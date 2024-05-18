@@ -259,7 +259,7 @@ MonoBehaviour:
   rotationPart: {fileID: 3807658922740800714}
   shootPosition: {fileID: 2043261188834175782}
   shootEffect: {fileID: 630087079897605335, guid: 8b52b76624216d443b7b373e8839260a, type: 3}
-  bullet: {fileID: 5509829966741027539, guid: fcee421a0341598498da3ac1dae2d33b, type: 3}
+  bullet: {fileID: -6527494006116309047, guid: 9b824dbcb2cf4314e9515da590c253ca, type: 3}
   towerUpgradeData:
   - upgradePrice: 20
     buyPrice: 0

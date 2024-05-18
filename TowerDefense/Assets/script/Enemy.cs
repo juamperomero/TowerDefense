@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
 
     private SaludPlayer playerBase;
     private bool isAttacking = false;
+    private WaveManager waveManager;  // Referencia al WaveManager
     
     private void Awake()
     {
@@ -37,6 +38,7 @@ public class Enemy : MonoBehaviour
         anim.SetBool("Movement", true);
         GetWayPoints();
         playerBase = FindObjectOfType<SaludPlayer>();
+        waveManager = FindObjectOfType<WaveManager>();  // Buscar y asignar la referencia del WaveManager
     }
 
     void Start()
@@ -54,7 +56,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         canvasRoot.transform.rotation = initLifeRotation;
@@ -62,7 +63,7 @@ public class Enemy : MonoBehaviour
         LookAt();
     }
 
-private void Movement()
+    private void Movement()
     {
         if (isDead) return;
         transform.position = Vector3.MoveTowards(transform.position, waypoints[targetIndex].position, movementSpeed * Time.deltaTime);
@@ -78,6 +79,7 @@ private void Movement()
             targetIndex++;
         }
     }
+
     private void LookAt()
     {
         var dir = waypoints[targetIndex].position - transform.position;
@@ -97,7 +99,7 @@ private void Movement()
         }
     }
 
-     private float GetAnimationLength(string animationName)
+    private float GetAnimationLength(string animationName)
     {
         foreach (var clip in anim.runtimeAnimatorController.animationClips)
         {
@@ -109,20 +111,11 @@ private void Movement()
         return 0f;
     }
 
-    private void OnDeadBase()
-    {
-        isDead = true;
-        anim.SetBool("Die", true);
-        currentLife = 0;
-        FillLife.fillAmount = 0;
-        StartCoroutine(OnDeadEffect());
-    }
-
     public void TakeDamage(float dmg)
     {
         var newLife = currentLife - dmg;
-        if(isDead) return;      
-        if(newLife <= 0)
+        if (isDead) return;      
+        if (newLife <= 0)
         {
             OnDead();
         }
@@ -140,6 +133,12 @@ private void Movement()
         FillLife.fillAmount = 0;
         StartCoroutine(OnDeadEffect());
         PlayerData.instance.AddMoney(moneyOnDead);
+
+        // Notificar al WaveManager que este enemigo ha sido derrotado
+        if (waveManager != null)
+        {
+            waveManager.EnemyDefeated(this);
+        }
     }
 
     private IEnumerator OnDeadEffect()
