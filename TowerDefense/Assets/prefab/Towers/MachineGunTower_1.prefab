@@ -220,7 +220,7 @@ MonoBehaviour:
     buyPrice: 40
     sellPrice: 20
     range: 12
-    dmg: 22
+    dmg: 25
     timetoShoot: 1
   currentTarget: {fileID: 0}
   currentTargets: []
@@ -232,15 +232,9 @@ MonoBehaviour:
   - upgradePrice: 20
     buyPrice: 0
     sellPrice: 20
-    range: 14
-    dmg: 24
-    timetoShoot: 1
-  - upgradePrice: 0
-    buyPrice: 0
-    sellPrice: 15
     range: 16
-    dmg: 26
-    timetoShoot: 0.8
+    dmg: 35
+    timetoShoot: 1
   currentIndexUpgrade: 0
 --- !u!1 &6861291956157157930
 GameObject:

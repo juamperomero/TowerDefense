@@ -65,15 +65,9 @@ MonoBehaviour:
   - upgradePrice: 20
     buyPrice: 0
     sellPrice: 15
-    range: 13
-    dmg: 35
+    range: 15
+    dmg: 30
     timetoShoot: 1
-  - upgradePrice: 20
-    buyPrice: 0
-    sellPrice: 15
-    range: 14
-    dmg: 40
-    timetoShoot: 0.8
   currentIndexUpgrade: 0
 --- !u!1 &3893570242853658048
 GameObject:
