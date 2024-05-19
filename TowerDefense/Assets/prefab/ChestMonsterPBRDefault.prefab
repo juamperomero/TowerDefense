@@ -738,10 +738,10 @@ MonoBehaviour:
   movementSpeed: 4
   rotationSpeed: 6
   isDead: 0
-  maxLife: 100
+  maxLife: 150
   currentLife: 0
   FillLife: {fileID: 3539795404100487048}
-  moneyOnDead: 10
+  moneyOnDead: 15
   dmg: 100
 --- !u!65 &4252748393345171516
 BoxCollider:
