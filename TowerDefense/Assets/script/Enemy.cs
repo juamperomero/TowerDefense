@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour
             anim.SetTrigger("Attack");
             yield return new WaitForSeconds(GetAnimationLength("Attack01"));
             playerBase.TakeDmg(dmg);
-            Destroy(gameObject);
+            OnDead();
         }
     }
 
