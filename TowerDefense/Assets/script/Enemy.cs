@@ -120,7 +120,7 @@ public class Enemy : MonoBehaviour
             OnDead();
         }
         currentLife = newLife;
-        var fillValue = currentLife / 100;
+        var fillValue = currentLife / maxLife;
         FillLife.fillAmount = fillValue;
         currentLife = newLife;
     }
