@@ -704,14 +704,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  movementSpeed: 4
+  movementSpeed: 3
   rotationSpeed: 6
   isDead: 0
-  maxLife: 100
+  maxLife: 200
   currentLife: 0
   FillLife: {fileID: 476998415861693687}
-  moneyOnDead: 10
-  dmg: 10
+  moneyOnDead: 15
+  dmg: 150
 --- !u!65 &6088225957839551719
 BoxCollider:
   m_ObjectHideFlags: 0

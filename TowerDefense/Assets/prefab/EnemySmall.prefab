@@ -1178,7 +1178,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  movementSpeed: 4
+  movementSpeed: 6
   rotationSpeed: 6
   isDead: 0
   maxLife: 50
