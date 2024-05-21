@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour
             anim.SetTrigger("Attack");
             yield return new WaitForSeconds(GetAnimationLength("Attack01"));
             playerBase.TakeDmg(dmg);
-            OnDead();
+            OnDeadBase();
         }
     }
 
@@ -133,6 +133,21 @@ public class Enemy : MonoBehaviour
         FillLife.fillAmount = 0;
         StartCoroutine(OnDeadEffect());
         PlayerData.instance.AddMoney(moneyOnDead);
+
+        // Notificar al WaveManager que este enemigo ha sido derrotado
+        if (waveManager != null)
+        {
+            waveManager.EnemyDefeated(this);
+        }
+    }
+
+    private void OnDeadBase()
+    {
+        isDead = true;
+        anim.SetBool("Die", true);
+        currentLife = 0;
+        FillLife.fillAmount = 0;
+        StartCoroutine(OnDeadEffect());
 
         // Notificar al WaveManager que este enemigo ha sido derrotado
         if (waveManager != null)
