@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class MenuSiguienteNivel : MonoBehaviour
 {
     public GameObject nextLevelPanel;
-    
+    public int[] escenasConMuñeca = { 1, 6, 10, 14 }; // Números de índice de las escenas con la muñeca hablando
+
     public void ShowNextLevelPanel()
     {
         nextLevelPanel.SetActive(true);
@@ -16,15 +17,26 @@ public class MenuSiguienteNivel : MonoBehaviour
     public void NextLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+        if (System.Array.Exists(escenasConMuñeca, element => element == nextSceneIndex))
+        {
+            SceneManager.LoadScene(nextSceneIndex); // Carga la escena con la muñeca hablando
+        }
+        else
+        {
+            SceneManager.LoadScene(nextSceneIndex); // Carga el siguiente nivel normal
+        }
     }
 
-    public void MenuInicial(string nombre){
+    public void MenuInicial(string nombre)
+    {
         Time.timeScale = 1f;
         SceneManager.LoadScene(nombre);
     }
 
-    public void Salir(){
+    public void Salir()
+    {
         UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }

@@ -14,18 +14,12 @@ public class WaveManager : MonoBehaviour
 
     public TextMeshProUGUI counterText;
     public GameObject buttonNextWave;
-    public GameObject nextLevelCanvas;  // Referencia al Canvas del siguiente nivel
-    private SeleccionNivel seleccionNivel;  // Referencia al script de selección de nivel
+    public GameObject nextLevelCanvas;
 
     private List<Enemy> currentEnemies = new List<Enemy>();
 
     void Start()
     {
-        seleccionNivel = FindObjectOfType<SeleccionNivel>();  // Buscar y asignar la referencia del script de selección de nivel
-        if (seleccionNivel == null)
-        {
-            Debug.LogError("No se pudo encontrar el script SeleccionNivel. Asegúrate de que está en la escena.");
-        }
         StartCoroutine(ProcesWave());
     }
 
@@ -69,7 +63,7 @@ public class WaveManager : MonoBehaviour
         for (int i = 0; i < waves[currentWave].enemys.Count; i++)
         {
             var enemyGo = Instantiate(waves[currentWave].enemys[i], initPosition.position, initPosition.rotation);
-            currentEnemies.Add(enemyGo.GetComponent<Enemy>());  // Añadir el enemigo a la lista
+            currentEnemies.Add(enemyGo);
             yield return new WaitForSeconds(waves[currentWave].timerPerCreation);
         }
         isWaitingForNextWave = true;
@@ -91,37 +85,23 @@ public class WaveManager : MonoBehaviour
 
     private void CheckAllEnemiesDefeated()
     {
-        // Verifica si todas las oleadas han terminado y no hay enemigos en la lista
         if (wavesFinish && currentEnemies.Count == 0)
         {
-            // Marca el nivel como completado
-            int nivelActual = SceneManager.GetActiveScene().buildIndex;
-            if (seleccionNivel != null)
-            {
-                seleccionNivel.NivelCompletado(nivelActual);
-            }
-            else
-            {
-                Debug.LogError("SeleccionNivel es nulo.");
-            }
-
-            // Muestra el panel para saltar al siguiente nivel
-            ShowNextLevelPanel();
+            if(SceneManager.GetActiveScene().name == "Nivel10")    GoToFinal();
+            else    ShowNextLevelPanel();
         }
     }
 
     private void ShowNextLevelPanel()
-{
-    if (nextLevelCanvas != null)
     {
         nextLevelCanvas.SetActive(true);
+        FindObjectOfType<SeleccionNivel>().NivelCompletado(SceneManager.GetActiveScene().buildIndex);
     }
-    else
-    {
-        Debug.LogError("El canvas de próximo nivel no está asignado en el Inspector.");
-    }
-}
 
+    private void GoToFinal()
+    {
+        SceneManager.LoadScene("ULip Final");
+    }
 
     public void EnemyDefeated(Enemy enemy)
     {

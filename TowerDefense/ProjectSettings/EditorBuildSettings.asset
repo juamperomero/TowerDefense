@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuInicial.unity
     guid: 6a28ef4d79ee9714d8d8ad6efee02190
   - enabled: 1
+    path: Assets/Scenes/ULip Inicio.unity
+    guid: 23cb1dba409a646488ca1c7f5691c3c9
+  - enabled: 1
     path: Assets/Scenes/Nivel1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
@@ -21,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel4.unity
     guid: 768c4ca45e15aea49b22b6ce515a5cc7
   - enabled: 1
+    path: Assets/Scenes/ULip Nieve.unity
+    guid: bdf97f94616522e4799ffe4131f972bc
+  - enabled: 1
     path: Assets/Scenes/Nivel5.unity
     guid: 3fa8c43fcba4bde4eb712211e4b24f91
   - enabled: 1
@@ -30,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel7.unity
     guid: 4ce6dedfc4d572d47a71a8e4e4dddb21
   - enabled: 1
+    path: Assets/Scenes/ULip Desierto.unity
+    guid: df93b291896612f499c37c1b5900fb46
+  - enabled: 1
     path: Assets/Scenes/Nivel8.unity
     guid: ebc427057328b7a419b25473fed266c6
   - enabled: 1
@@ -38,6 +47,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel10.unity
     guid: 258916cfded676e488b0d86a9cb1152e
+  - enabled: 1
+    path: Assets/Scenes/ULip Final.unity
+    guid: 306349ae7426aee4aac260d1781076df
+  - enabled: 1
+    path: Assets/Scenes/TheLast.unity
+    guid: a97e33d4822c01347b235663adcf46c7
   - enabled: 1
     path: Assets/Scenes/MenuNiveles.unity
     guid: e74728d08859ff44a9b3cc05e742f168
