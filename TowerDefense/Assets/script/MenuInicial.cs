@@ -14,7 +14,9 @@ public class MenuInicial : MonoBehaviour
     }
 
     public void Salir(){
+        #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+        #endif
         Application.Quit();
     }
 }
